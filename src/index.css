@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/*
+Color Palette:
+#00B8A9 - Teal
+#F8F3D4 - Beige
+#F6416C - Red
+#FFDE7D - Yellow
+*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>;*/
+  font-style: normal;
+}
+
+.primary-button {
+  background-color: rgba(244, 65, 108, 1);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 15px;
+  padding: 12px 30px;
+  text-transform: uppercase;
+}
+
+.primary-button:hover {
+  background-color: rgba(244, 65, 108, 0.75);
+}
+
+.primary-button:active {
+  background-color: rgba(244, 65, 108, 0.5);
+}
+
+body {
+  text-align: center;
+}
