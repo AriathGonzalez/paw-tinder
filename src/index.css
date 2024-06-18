@@ -17,17 +17,16 @@ body {
 * {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
-  /* font-weight: <weight>;*/
   font-style: normal;
 }
 
 .primary-button {
   background-color: rgba(244, 65, 108, 1);
   border: none;
-  border-radius: 30px;
+  border-radius: 1.9em;
   color: white;
-  font-size: 15px;
-  padding: 12px 30px;
+  font-size: 1rem;
+  padding: 0.75em 1.9em;
   text-transform: uppercase;
 }
 

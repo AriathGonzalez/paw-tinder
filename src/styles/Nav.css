@@ -7,8 +7,8 @@ nav {
 }
 
 nav .logo-container {
-  width: 170px;
-  margin: 15px;
+  width: 15%;
+  margin: 1em;
 }
 
 nav .logo-container .logo {
@@ -18,9 +18,9 @@ nav .logo-container .logo {
 nav .nav-button {
   color: rgba(244, 65, 108, 1);
   background-color: white;
-  font-size: 20px;
-  padding: 10px 20px;
-  border-radius: 10px;
+  font-size: 1.25rem;
+  padding: 0.65em 1.25em;
+  border-radius: 0.65em;
   border: none;
-  margin: 10px;
+  margin: 0.65em;
 }
