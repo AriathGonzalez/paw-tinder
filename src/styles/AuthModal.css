@@ -1,0 +1,33 @@
+.auth-modal {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 0.65em;
+  display: flex;
+  flex-direction: column;
+  height: 36em;
+  left: 50%;
+  max-width: 20em;
+  padding: 2.5em;
+  position: fixed;
+  top: 3em;
+  transform: translateX(-50%);
+  width: 20em;
+}
+
+.close-icon {
+  align-self: end;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.auth-modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-modal input[type="password"],
+.auth-modal input[type="email"] {
+  margin: 0.5em;
+  color: rgba(0, 184, 169, 0.75);
+  font-size: 1rem;
+  padding: 0.5em;
+}

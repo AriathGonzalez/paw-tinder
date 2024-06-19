@@ -4,20 +4,44 @@ import "@testing-library/jest-dom";
 import Nav from "../components/Nav";
 
 describe("React App", () => {
-  test("Test renders text", () => {
-    render(<Nav minimal={false} authToken={false} />);
-    const text = screen.getByText("Log in");
+  test("Test renders Log In text correctly", () => {
+    render(
+      <Nav
+        minimal={false}
+        authToken={false}
+        showModal={false}
+        setShowModal={null}
+        setIsSignUp={null}
+      />
+    );
+    const text = screen.getByText("Log In");
     expect(text).toBeInTheDocument();
   });
 
   test("Test does not render text", () => {
-    render(<Nav minimal={true} authToken={false} />);
-    const text = screen.queryByText("Log in");
+    render(
+      <Nav
+        minimal={true}
+        authToken={false}
+        showModal={false}
+        setShowModal={null}
+        setIsSignUp={null}
+      />
+    );
+    const text = screen.queryByText("Log In");
     expect(text).toBeNull();
   });
 
-  test("Renders Correctly", () => {
-    const { container } = render(<Nav minimal={false} authToken={false} />);
+  test("Nav Renders Correctly", () => {
+    const { container } = render(
+      <Nav
+        minimal={false}
+        authToken={false}
+        showModal={false}
+        setShowModal={null}
+        setIsSignUp={null}
+      />
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 });

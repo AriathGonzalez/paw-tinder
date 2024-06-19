@@ -4,13 +4,13 @@ import "@testing-library/jest-dom";
 import Home from "../pages/Home";
 
 describe("React App", () => {
-  test("Test renders text", () => {
+  test("Test renders Sniff Right® correct", () => {
     render(<Home />);
-    const text = screen.getByText("Swipe Right®");
+    const text = screen.getByText("Sniff Right®");
     expect(text).toBeInTheDocument();
   });
 
-  test("Renders Correctly", () => {
+  test("Home Renders Correctly", () => {
     const { container } = render(<Home />);
     expect(container.firstChild).toMatchSnapshot();
   });

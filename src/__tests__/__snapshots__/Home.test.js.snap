@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`React App Renders Correctly 1`] = `
+exports[`React App Home Renders Correctly 1`] = `
 <div
   class="overlay"
 >
@@ -11,20 +11,22 @@ exports[`React App Renders Correctly 1`] = `
       <img
         alt="Logo"
         class="logo"
-        src="paw_tinder_logo.png"
+        src="paw_tinder_logo_black.png"
       />
     </div>
     <button
       class="nav-button"
     >
-      Log in
+      Log In
     </button>
   </nav>
   <div
     class="home"
   >
-    <h1>
-      Swipe Right®
+    <h1
+      class="primary-title"
+    >
+      Sniff Right®
     </h1>
     <button
       class="primary-button"

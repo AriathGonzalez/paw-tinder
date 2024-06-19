@@ -12,6 +12,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 * {
@@ -20,11 +21,20 @@ body {
   font-style: normal;
 }
 
+h2 {
+  font-style: italic;
+}
+
+.primary-title {
+  font-size: 5.6rem;
+}
+
 .primary-button {
   background-color: rgba(244, 65, 108, 1);
   border: none;
   border-radius: 1.9em;
   color: white;
+  cursor: pointer;
   font-size: 1rem;
   padding: 0.75em 1.9em;
   text-transform: uppercase;
@@ -38,6 +48,25 @@ body {
   background-color: rgba(244, 65, 108, 0.5);
 }
 
-body {
-  text-align: center;
+.secondary-button {
+  background-color: rgba(255, 255, 255, 1);
+  border: solid 0.12em rgba(0, 184, 169, 1);
+  border-radius: 1.9em;
+  color: rgba(0, 184, 169, 1);
+  cursor: pointer;
+  margin: 0.4em;
+  font-size: 1rem;
+  font-weight: 31.25rem;
+  padding: 0.75em 1.8em;
+  text-transform: uppercase;
+}
+
+.secondary-button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: solid 0.12em rgba(0, 184, 169, 0.75);
+}
+
+.secondary-button:active {
+  background-color: rgba(255, 255, 255, 0.25);
+  border: solid 0.12em rgba(0, 184, 169, 0.5);
 }
