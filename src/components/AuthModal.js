@@ -13,6 +13,7 @@ const AuthModal = ({ setShowModal, isSignUp, setIsSignUp }) => {
   };
 
   const handleSubmit = (e) => {
+    console.log("email: ", email); // TODO: Remove
     e.preventDefault();
     try {
       if (isSignUp && password !== confirmPassword) {
