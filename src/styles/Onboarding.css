@@ -1,0 +1,83 @@
+.onboarding {
+  border-top: solid 0.1em rgba(244, 65, 108, 1);
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+form section {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25em;
+  text-align: start;
+  width: 35%;
+}
+
+form input {
+  border: solid 0.1em rgba(244, 65, 108, 1);
+  border-radius: 0.6em;
+  font-size: 1rem;
+  margin: 0.6em 0;
+  padding: 1em 1.9em;
+}
+
+form input::-webkit-outer-spin-button,
+form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+form label {
+  margin: 0.6em 0;
+}
+
+form .multiple-input-container {
+  display: flex;
+  flex-direction: row;
+}
+
+form .multiple-input-container input {
+  margin-right: 0.6em;
+}
+
+form .multiple-input-container label {
+  border: solid 0.1em rgba(0, 184, 169, 1);
+  border-radius: 0.6em;
+  margin-right: 0.6em;
+  padding: 0.6em;
+  transition: all 0.3s;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+
+form input[type="number"] {
+  width: 10%;
+}
+
+form input[type="radio"]:checked + label {
+  border: solid 0.1em rgba(0, 184, 169, 0.5);
+}
+
+form input[type="submit"] {
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: rgba(244, 65, 108, 0.75);
+}
+
+form input[type="submit"]:active {
+  background-color: rgba(244, 65, 108, 1);
+}
+
+input:invalid {
+  border: solid 0.1em rgba(244, 65, 108, 1);
+}
+
+form .photo-container img {
+  width: 100%;
+}

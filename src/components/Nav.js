@@ -2,11 +2,13 @@ import colorLogo from "../images/paw_tinder_logo.png";
 import blackLogo from "../images/paw_tinder_logo_black.png";
 import "../styles/Nav.css";
 
-const Nav = ({ minimal, authToken, showModal, setShowModal, setIsSignUp }) => {
+const Nav = ({ minimal, showModal, setShowModal, setIsSignUp }) => {
   const handleClick = () => {
     setShowModal(true);
-    setIsSignUp(false);
+    setIsSignUp(false); // TODO: Reminder - may not need setIsSignUp
   };
+
+  const authToken = true;
 
   return (
     <nav>

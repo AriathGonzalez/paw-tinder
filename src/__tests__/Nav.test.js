@@ -8,7 +8,6 @@ describe("React App", () => {
     render(
       <Nav
         minimal={false}
-        authToken={false}
         showModal={false}
         setShowModal={null}
         setIsSignUp={null}
@@ -22,7 +21,6 @@ describe("React App", () => {
     render(
       <Nav
         minimal={true}
-        authToken={false}
         showModal={false}
         setShowModal={null}
         setIsSignUp={null}
@@ -36,7 +34,6 @@ describe("React App", () => {
     const { container } = render(
       <Nav
         minimal={false}
-        authToken={false}
         showModal={false}
         setShowModal={null}
         setIsSignUp={null}

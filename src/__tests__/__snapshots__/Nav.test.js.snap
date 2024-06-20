@@ -11,10 +11,5 @@ exports[`React App Nav Renders Correctly 1`] = `
       src="paw_tinder_logo_black.png"
     />
   </div>
-  <button
-    class="nav-button"
-  >
-    Log In
-  </button>
 </nav>
 `;
