@@ -1,7 +1,7 @@
 import Nav from "../components/Nav";
 import AuthModal from "../components/AuthModal";
-import "../styles/Homepage.css";
 import { useState } from "react";
+import "../styles/Homepage.css";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);

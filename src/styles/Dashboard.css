@@ -1,0 +1,46 @@
+/* Tinder Card */
+.swipe {
+  position: absolute;
+}
+
+.cardContainer {
+  width: 19em; /* 25em width and 40em height*/
+  height: 38em;
+}
+
+.card {
+  width: 19em;
+  height: 38em;
+  border-radius: 1.8em;
+  background-size: cover;
+  background-position: center;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* Dashboard */
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-container {
+  height: 38em;
+  width: 19em;
+}
+
+.swipe-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 70%;
+}
+
+.swipe-info {
+  margin-top: 0.5em;
+  position: relative;
+}
