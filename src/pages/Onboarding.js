@@ -180,7 +180,7 @@ const Onboarding = () => {
             />
 
             <div className="photo-container">
-              <img src={formData.url} alt="Profile Picture" />
+              <img src={formData.url} alt="Profile" />
             </div>
           </section>
         </form>
