@@ -22,8 +22,11 @@
 
 /* Dashboard */
 .dashboard {
+  background-color: rgba(249, 249, 249, 1);
   display: flex;
+  height: 100vh;
   justify-content: space-between;
+  width: 100vw;
 }
 
 .card-container {
