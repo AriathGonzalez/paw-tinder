@@ -4,4 +4,10 @@
 
 ### Runnning frontend
 
+- cd client
+- npm run start
+
+### Running backend
+
+- cd server
 - npm run start

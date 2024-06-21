@@ -10,7 +10,6 @@ const Home = () => {
   const authToken = false;
 
   const handleClick = () => {
-    console.log("home, create account clicked!");
     setShowModal(true);
   };
 
