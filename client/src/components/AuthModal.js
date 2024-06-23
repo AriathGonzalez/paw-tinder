@@ -9,7 +9,7 @@ const AuthModal = ({ setShowModal, isSignUp, setIsSignUp }) => {
   const [password, setPassword] = useState(null);
   const [confirmPassword, setConfirmPassword] = useState(null);
   const [error, setError] = useState(null);
-  const [cookie, setCookie, removeCookie] = useCookies(["user"]);
+  const [, setCookie] = useCookies(["user"]); // [cookie, setCookie, removeCookie]
 
   let navigate = useNavigate();
 

@@ -28,9 +28,21 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install dependencies and build
+      - name: Install client dependencies and build
         working-directory: ./client
         run: |
           npm ci
           npm run build --if-present
           yarn test
+
+      - name: Use Node.js ${{ matrix.node-version }} for server
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install server dependencies and build
+        working-directory: ./server
+        run: |
+          npm ci
+          npm run build --if-present
+          npm test
