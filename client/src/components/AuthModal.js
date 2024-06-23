@@ -1,8 +1,8 @@
 import "../styles/AuthModal.css";
 import { useState } from "react";
-import { axios } from "axios";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
+const axios = require("axios");
 
 const AuthModal = ({ setShowModal, isSignUp, setIsSignUp }) => {
   const [email, setEmail] = useState(null);
