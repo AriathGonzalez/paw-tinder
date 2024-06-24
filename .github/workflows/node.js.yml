@@ -33,7 +33,7 @@ jobs:
         run: |
           npm ci
           npm run build --if-present
-          yarn test
+          npm test
 
       - name: Use Node.js ${{ matrix.node-version }} for server
         uses: actions/setup-node@v3
@@ -44,5 +44,4 @@ jobs:
         working-directory: ./server
         run: |
           npm ci
-          npm run build --if-present
           npm test
