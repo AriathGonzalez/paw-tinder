@@ -21,6 +21,7 @@ describe("/users", () => {
   afterAll(async () => {
     await mongoose.disconnect();
     await mongoose.connection.close();
+    await mongoServer.stop();
   });
 
   beforeEach(async () => {
@@ -31,7 +32,7 @@ describe("/users", () => {
 
   describe("/signup", () => {
     describe("given an email and password", () => {
-      test("should create a new user and respond with a 201 status code", async () => {
+      it("should create a new user and respond with a 201 status code", async () => {
         const response = await supertest(app)
           .post("/users/signup")
           .send(userData)
@@ -43,7 +44,7 @@ describe("/users", () => {
       });
     });
     describe("when the email and password is missing", () => {
-      test("should respond with a status code of 500", async () => {
+      it("should respond with a status code of 500", async () => {
         const response = await supertest(app)
           .post("/users/signup")
           .send({})
@@ -58,7 +59,7 @@ describe("/users", () => {
 
   describe("/", () => {
     describe("when user already exists", () => {
-      test("should return 409 if user already exists", async () => {
+      it("should return 409 if user already exists", async () => {
         await supertest(app).post("/users/signup").send(userData);
 
         // Try to create the same user again
