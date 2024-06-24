@@ -1,11 +1,11 @@
-import React from "react";
-import { render } from "@testing-library/react";
-import "@testing-library/jest-dom";
 import Onboarding from "../pages/Onboarding";
+import renderer from "react-test-renderer";
 
-describe("React App", () => {
-  test("Onboarding Renders Correctly", () => {
-    const { container } = render(<Onboarding />);
-    expect(container.firstChild).toMatchSnapshot();
+describe("Onboarding Page", () => {
+  describe("Snapshot Test", () => {
+    it("Should render correctly", () => {
+      const tree = renderer.create(<Onboarding />).toJSON();
+      expect(tree).toMatchSnapshot();
+    });
   });
 });

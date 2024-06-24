@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`React App Nav Renders Correctly 1`] = `
+exports[`Nav Component Snapshot Test Should render correctly 1`] = `
 <nav>
   <div
-    class="logo-container"
+    className="logo-container"
   >
     <img
       alt="Logo"
-      class="logo"
+      className="logo"
       src="paw_tinder_logo_black.png"
     />
   </div>

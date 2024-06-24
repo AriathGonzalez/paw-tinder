@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`React App AuthModal Renders Correctly 1`] = `
+exports[`AuthModel Component Snapshot Test Should render correctly 1`] = `
 <div
-  class="auth-modal"
+  className="auth-modal"
 >
   <div
-    class="close-icon"
+    className="close-icon"
+    onClick={[Function]}
   >
     ⓧ
   </div>
@@ -15,30 +16,35 @@ exports[`React App AuthModal Renders Correctly 1`] = `
   <p>
     By Clicking Log In, you agree to our terms. Learn how we process your data in our Privacy Policy and Cookie Policy.
   </p>
-  <form>
+  <form
+    onSubmit={[Function]}
+  >
     <input
       id="email"
       name="email"
+      onChange={[Function]}
       placeholder="email"
-      required=""
+      required={true}
       type="email"
     />
     <input
       id="password"
       name="password"
+      onChange={[Function]}
       placeholder="password"
-      required=""
+      required={true}
       type="password"
     />
     <input
       id="password-check"
       name="password-check"
+      onChange={[Function]}
       placeholder="confirm password"
-      required=""
+      required={true}
       type="password"
     />
     <input
-      class="secondary-button"
+      className="secondary-button"
       type="submit"
     />
     <p />

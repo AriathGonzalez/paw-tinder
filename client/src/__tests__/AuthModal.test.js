@@ -1,13 +1,18 @@
-import React from "react";
-import { render } from "@testing-library/react";
-import "@testing-library/jest-dom";
 import AuthModal from "../components/AuthModal";
+import renderer from "react-test-renderer";
+import { BrowserRouter } from "react-router-dom";
 
-describe("React App", () => {
-  test("AuthModal Renders Correctly", () => {
-    const { container } = render(
-      <AuthModal setShowModal={null} isSignUp={true} setIsSignUp={null} />
-    );
-    expect(container.firstChild).toMatchSnapshot();
+describe("AuthModel Component", () => {
+  describe("Snapshot Test", () => {
+    it("Should render correctly", () => {
+      const tree = renderer
+        .create(
+          <BrowserRouter>
+            <AuthModal setShowModal={null} isSignUp={true} setIsSignUp={null} />
+          </BrowserRouter>
+        )
+        .toJSON();
+      expect(tree).toMatchSnapshot();
+    });
   });
 });
