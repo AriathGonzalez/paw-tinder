@@ -25,18 +25,23 @@ const AuthModal = ({ setShowModal, isSignUp, setIsSignUp }) => {
         setError("Passwords need to match!");
         return;
       }
-      const response = await axios.post("http://localhost:5000/users/signup", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        `http://localhost:5000/users/${isSignUp ? "signup" : "login"}`,
+        {
+          email,
+          password,
+        }
+      );
 
-      setCookie("Email", response.data.email);
-      setCookie("UserId", response.data.userId);
       setCookie("AuthToken", response.data.token);
+      setCookie("UserId", response.data.userId);
 
       const success = response.status === 201;
 
-      if (success) navigate("/onboarding");
+      if (success && isSignUp) navigate("/onboarding");
+      if (success && !isSignUp) navigate("/dashboard");
+
+      window.location.reload();
     } catch (error) {
       console.log(error);
     }

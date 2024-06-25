@@ -8,7 +8,7 @@ const Nav = ({ minimal, showModal, setShowModal, setIsSignUp }) => {
     setIsSignUp(false); // TODO: Reminder - may not need setIsSignUp
   };
 
-  const authToken = true;
+  const authToken = false;
 
   return (
     <nav>

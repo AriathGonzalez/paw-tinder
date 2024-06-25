@@ -212,12 +212,7 @@ Array [
         />
         <div
           className="photo-container"
-        >
-          <img
-            alt="Profile"
-            src=""
-          />
-        </div>
+        />
       </section>
     </form>
   </div>,

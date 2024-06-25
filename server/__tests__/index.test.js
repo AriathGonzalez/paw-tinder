@@ -40,7 +40,6 @@ describe("/users", () => {
 
         expect(response.body).toHaveProperty("token");
         expect(response.body).toHaveProperty("userId");
-        expect(response.body).toHaveProperty("email");
       });
     });
     describe("when the email and password is missing", () => {
@@ -50,7 +49,7 @@ describe("/users", () => {
           .send({})
           .expect(500);
 
-        expect(response.text).toBe(
+        expect(response.body.error).toBe(
           "Internal server error: Could not create new user."
         );
       });
@@ -68,7 +67,7 @@ describe("/users", () => {
           .send(userData)
           .expect(409);
 
-        expect(response.text).toBe("User already exists. Please login.");
+        expect(response.body.error).toBe("User already exists. Please login.");
       });
     });
   });

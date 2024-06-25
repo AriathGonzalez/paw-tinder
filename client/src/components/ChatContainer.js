@@ -3,15 +3,15 @@ import MatchesDisplay from "./MatchesDisplay";
 import ChatDisplay from "./ChatDisplay";
 import "../styles/ChatContainer.css";
 
-const ChatContainer = () => {
+const ChatContainer = ({ user }) => {
   return (
     <div className="chat-container">
-      <ChatHeader />
+      <ChatHeader user={user} />
       <div>
         <button className="options">Matches</button>
         <button className="options">Chat</button>
       </div>
-      <MatchesDisplay />
+      <MatchesDisplay matches={user.matches} />
       <ChatDisplay />
     </div>
   );
