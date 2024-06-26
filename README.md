@@ -18,7 +18,7 @@ A Tinder clone built using the MERN stack (MongoDB, Express, React, Node.js). Th
 
 ### Home
 
-![home](https://github.com/AriathGonzalez/paw-tinder/assets/84883360/ff80b397-272d-43a1-875e-71b0d1a44bdb)
+![home](https://github.com/AriathGonzalez/paw-tinder/assets/84883360/34059c5a-6a03-406d-b708-df0c643f1e75)
 
 ![home2](https://github.com/AriathGonzalez/paw-tinder/assets/84883360/0e3ac1bf-3c17-4dcb-a768-e1b807396939)
 
