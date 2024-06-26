@@ -51,6 +51,10 @@ A Tinder clone built using the MERN stack (MongoDB, Express, React, Node.js). Th
 - **Node.js**: Server-side JavaScript runtime
 - **Redux**: State management for React
 - **JWT**: JSON Web Tokens for authentication
+- **Jest**: JavaScript Testing Framework
+- **bcrypt**: Password-hashing function
+- **react-cookie**: Web cookies
+- **Axios**: Promise-based HTTP Client for node.js
 
 ## Installation
 
