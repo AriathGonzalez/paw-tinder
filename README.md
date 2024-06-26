@@ -16,13 +16,23 @@ A Tinder clone built using the MERN stack (MongoDB, Express, React, Node.js). Th
 
 ## Pages
 
-- Todo Add Pages
-
 ### Home
+
+![home](https://github.com/AriathGonzalez/paw-tinder/assets/84883360/ff80b397-272d-43a1-875e-71b0d1a44bdb)
+
+![home2](https://github.com/AriathGonzalez/paw-tinder/assets/84883360/0e3ac1bf-3c17-4dcb-a768-e1b807396939)
+
+![home3](https://github.com/AriathGonzalez/paw-tinder/assets/84883360/2f6c3130-8a7e-4cff-9045-200da0dbfba8)
 
 ### Onboarding
 
+![onboarding](https://github.com/AriathGonzalez/paw-tinder/assets/84883360/134a5ef1-3c88-47d8-be20-f15a16ff2efa)
+
 ### Dashboard
+
+![dashboard](https://github.com/AriathGonzalez/paw-tinder/assets/84883360/4a28bd62-89a1-4a6b-9426-3079e6fbcf2e)
+
+![dashboard2](https://github.com/AriathGonzalez/paw-tinder/assets/84883360/55a7764f-5232-4cf2-8c28-1d0cacbe75e7)
 
 ## Features
 
