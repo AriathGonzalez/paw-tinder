@@ -16,7 +16,7 @@ form section {
 }
 
 form input {
-  border: solid 0.1em rgba(244, 65, 108, 1);
+  border: solid 0.1em;
   border-radius: 0.6em;
   font-size: 1rem;
   margin: 0.6em 0;
@@ -59,7 +59,7 @@ form input[type="number"] {
 }
 
 form input[type="radio"]:checked + label {
-  border: solid 0.1em rgba(0, 184, 169, 0.5);
+  border: solid 0.1em rgba(0, 184, 169, 0.25);
 }
 
 form input[type="submit"] {
@@ -72,10 +72,6 @@ form input[type="submit"]:hover {
 
 form input[type="submit"]:active {
   background-color: rgba(244, 65, 108, 1);
-}
-
-input:invalid {
-  border: solid 0.1em rgba(244, 65, 108, 1);
 }
 
 form .photo-container img {

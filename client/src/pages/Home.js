@@ -1,21 +1,30 @@
 import Nav from "../components/Nav";
 import AuthModal from "../components/AuthModal";
 import { useState } from "react";
+import { useCookies } from "react-cookie";
 import "../styles/Homepage.css";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
   const [isSignUp, setIsSignUp] = useState(true);
-
-  const authToken = false;
+  const [cookies, , removeCookie] = useCookies(["user"]);
+  const authToken = cookies.AuthToken;
 
   const handleClick = () => {
+    if (authToken) {
+      removeCookie("UserId", cookies.UserId);
+      removeCookie("AuthToken", cookies.AuthToken);
+      window.location.reload();
+      return;
+    }
     setShowModal(true);
+    setIsSignUp(true);
   };
 
   return (
     <div className="overlay">
       <Nav
+        authToken={authToken}
         minimal={false}
         showModal={showModal}
         setShowModal={setShowModal}

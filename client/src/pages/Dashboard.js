@@ -1,6 +1,6 @@
 import TinderCard from "react-tinder-card";
 import ChatContainer from "../components/ChatContainer";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useCookies } from "react-cookie";
 import axios from "axios";
 import "../styles/Dashboard.css";
@@ -12,21 +12,19 @@ const Dashboard = () => {
   const [cookies, ,] = useCookies(["user"]);
   const userId = cookies.UserId;
 
-  const getUser = async () => {
+  const getUser = useCallback(async () => {
     try {
       const response = await axios.get("http://localhost:5000/users/user", {
         params: { userId },
       });
-      console.log("response: ", response);
       setUser(response.data);
     } catch (error) {
       console.log(error);
     }
-  };
+  }, [userId]);
 
-  const getGenderedUsers = async () => {
+  const getGenderedUsers = useCallback(async () => {
     try {
-      console.log("user interest: ", user?.gender_interest);
       const response = await axios.get(
         "http://localhost:5000/users/gendered_users",
         {
@@ -37,10 +35,9 @@ const Dashboard = () => {
     } catch (error) {
       console.log(error);
     }
-  };
+  }, [user]);
 
   const updateMatches = async (matchedUserId) => {
-    console.log("matched with: ", matchedUserId);
     try {
       await axios.put("http://localhost:5000/users/add_match", {
         userId,
@@ -53,7 +50,6 @@ const Dashboard = () => {
   };
 
   const swiped = (direction, swipedUserId) => {
-    console.log("swiped on: ", swipedUserId);
     if (direction === "right") {
       updateMatches(swipedUserId);
     }
@@ -74,8 +70,13 @@ const Dashboard = () => {
 
   useEffect(() => {
     getUser();
-    getGenderedUsers();
-  }, [userId, user]);
+  }, [getUser]);
+
+  useEffect(() => {
+    if (user) {
+      getGenderedUsers();
+    }
+  }, [user, getGenderedUsers]);
 
   return (
     <>
@@ -95,7 +96,7 @@ const Dashboard = () => {
                     style={{ backgroundImage: "url(" + genderedUser.url + ")" }}
                     className="card"
                   >
-                    <h3>{genderedUser.first_name}</h3>
+                    <h3 className="card-name">{genderedUser.first_name}</h3>
                   </div>
                 </TinderCard>
               ))}

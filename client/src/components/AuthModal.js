@@ -1,15 +1,15 @@
-import "../styles/AuthModal.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import axios from "axios";
+import "../styles/AuthModal.css";
 
 const AuthModal = ({ setShowModal, isSignUp, setIsSignUp }) => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
   const [confirmPassword, setConfirmPassword] = useState(null);
   const [error, setError] = useState(null);
-  const [, setCookie] = useCookies(["user"]); // [cookie, setCookie, removeCookie]
+  const [, setCookie] = useCookies(["user"]);
 
   let navigate = useNavigate();
 
@@ -54,7 +54,7 @@ const AuthModal = ({ setShowModal, isSignUp, setIsSignUp }) => {
       </div>
       <h2>{isSignUp ? "Create Account" : "Log In"}</h2>
       <p>
-        By Clicking Log In, you agree to our terms. Learn how we process your
+        By Clicking Submit, you agree to our terms. Learn how we process your
         data in our Privacy Policy and Cookie Policy.
       </p>
       <form onSubmit={handleSubmit}>

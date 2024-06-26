@@ -29,6 +29,10 @@
   width: 100vw;
 }
 
+.dashboard .card-name {
+  color: rgba(249, 249, 249, 1);
+}
+
 .card-container {
   height: 38em;
   width: 19em;

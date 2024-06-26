@@ -11,10 +11,16 @@
   z-index: 1;
 }
 
+.chat-container .options-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .chat-container .options {
   background-color: rgba(249, 249, 249, 1);
   border: none;
   border-bottom: solid 0.25em rgba(244, 65, 108, 1);
+  cursor: pointer;
   font-size: 1.25rem;
   margin: 0.1em;
   padding: 0.6em;
@@ -59,10 +65,34 @@
 /* Chat Display */
 
 /* Chat */
+
+.chat-display,
+.matches-display {
+  height: 60vh;
+  overflow-y: auto;
+  padding: 1.25em;
+}
+
 .chat {
   height: 60vh;
   overflow-y: auto;
   padding: 1.25em;
+}
+
+.chat .chat-message-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.chat .message-container {
+  align-items: left;
+  display: flex;
+  border-radius: 0.75em;
+  background-color: rgba(248, 243, 212, 1);
+  padding-bottom: 0.25em;
+}
+.chat .message-container p {
+  margin-left: 0.35em;
 }
 
 /* Chat Input */
@@ -80,4 +110,9 @@
 
 .chat-input button {
   word-wrap: break-word;
+}
+
+/* Matches */
+.matches-display img {
+  cursor: pointer;
 }

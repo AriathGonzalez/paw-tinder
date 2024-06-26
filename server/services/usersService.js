@@ -35,7 +35,6 @@ const createUser = async (email, password) => {
     return { token, userId: generatedUserId };
   } catch (error) {
     console.error("Caught error in createUser:", error);
-
     throw error;
   } finally {
     await client.close();

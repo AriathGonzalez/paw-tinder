@@ -1,15 +1,14 @@
 .overlay {
   background: linear-gradient(
       to bottom,
-      rgba(248, 243, 212, 0.65),
+      rgba(248, 243, 212, 0.5),
       rgba(0, 0, 0, 0.05)
     ),
-    url("../images/paw_tinder_background.png") center/cover;
+    url("../images/background.png") center/cover;
   height: 100vh;
   width: 100vw;
   position: fixed;
 }
-
 .home {
   margin-top: 2.5em;
   position: relative;

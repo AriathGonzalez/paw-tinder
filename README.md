@@ -95,8 +95,8 @@ A Tinder clone built using the MERN stack (MongoDB, Express, React, Node.js). Th
 
 ### Messages
 
-- **GET** `/messages/matchId`: Get all messages for a match
-- **POST** `/messages`: Send a new message
+- **GET** `/messages/`: Get all messages for a match
+- **POST** `/messages/message`: Send a new message
 
 ## License
 

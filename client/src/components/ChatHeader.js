@@ -1,13 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 
 const ChatHeader = ({ user }) => {
   const [cookies, , removeCookie] = useCookies(["user"]);
 
+  let navigate = useNavigate();
+
   const logout = () => {
     removeCookie("UserId", cookies.UserId);
     removeCookie("AuthToken", cookies.AuthToken);
+    navigate("/");
     window.location.reload();
   };
 

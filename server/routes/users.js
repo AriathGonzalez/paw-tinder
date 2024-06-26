@@ -7,7 +7,7 @@ const {
   getMatchedUsers,
   updateUser,
   addMatchToUser,
-} = require("../services/userService");
+} = require("../services/usersService");
 
 const router = express.Router();
 
@@ -34,8 +34,7 @@ const loginHandler = async (req, res) => {
 
   try {
     const user = await loginUser(email, password);
-    console.log("login-handler: ", user);
-    return res.status(200).json(user);
+    return res.status(201).json(user);
   } catch (error) {
     if (error.message === "Invalid credentials") {
       return res.status(400).json({ error: error.message });
@@ -86,10 +85,8 @@ const genderedUsersHandler = async (req, res) => {
 
 const matchedUsersHandler = async (req, res) => {
   const userIds = JSON.parse(req.query.userIds);
-  console.log("handler-userids: ", userIds);
   try {
     const matchedUsers = await getMatchedUsers(userIds);
-    console.log("routes-matchedUsers: ", matchedUsers);
     return res.status(200).json(matchedUsers);
   } catch (error) {
     console.error("Error retrieving matched users:", error);
@@ -124,8 +121,6 @@ const updateUserHandler = async (req, res) => {
 
 const addMatchToUserHandler = async (req, res) => {
   const { userId, matchedUserId } = req.body;
-  console.log("handler-userId: ", userId);
-  console.log("handler-matchedUserId: ", matchedUserId);
   try {
     const updatedUser = await addMatchToUser(userId, matchedUserId);
     return res.status(200).json(updatedUser);

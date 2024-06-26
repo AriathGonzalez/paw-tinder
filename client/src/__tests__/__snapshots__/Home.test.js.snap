@@ -14,6 +14,13 @@ exports[`Home Page Snapshot Test Should render correctly 1`] = `
         src="paw_tinder_logo_black.png"
       />
     </div>
+    <button
+      className="nav-button"
+      disabled={false}
+      onClick={[Function]}
+    >
+      Log In
+    </button>
   </nav>
   <div
     className="home"

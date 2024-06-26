@@ -1,0 +1,44 @@
+const { MongoClient } = require("mongodb");
+const dotenv = require("dotenv");
+dotenv.config();
+
+const getMessages = async (userId, correspondingUserId) => {
+  const client = new MongoClient(process.env.MONGODB_URI);
+
+  try {
+    await client.connect();
+    const database = client.db("app-data");
+    const messages = database.collection("messages");
+
+    const query = {
+      from_userId: userId,
+      to_userId: correspondingUserId,
+    };
+    const foundMessages = await messages.find(query).toArray();
+    return foundMessages;
+  } catch (error) {
+    console.error("Database error:", error);
+    throw error;
+  } finally {
+    await client.close();
+  }
+};
+
+const insertMessage = async (message) => {
+  const client = new MongoClient(process.env.MONGODB_URI);
+
+  try {
+    await client.connect();
+    const database = client.db("app-data");
+    const messages = database.collection("messages");
+    const insertedMessage = await messages.insertOne(message);
+    return insertedMessage;
+  } catch (error) {
+    console.error("Database error:", error);
+    throw error;
+  } finally {
+    await client.close();
+  }
+};
+
+module.exports = { getMessages, insertMessage };
